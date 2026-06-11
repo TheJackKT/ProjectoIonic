@@ -20,6 +20,11 @@ const usuarios = [
       usuario: 'Javier',
       clave: 'waos'
     },
+
+    {
+      usuario: 'Jazmin',
+      clave: '182'
+    },
    
    {
       usuario: 'admin',
@@ -58,7 +63,7 @@ const Login: React.FC = () => {
 
       <IonCardContent className="card-login"> 
 
-     <IonTitle>Agenda de Contactos {user}</IonTitle>
+     <IonTitle>Agenda de Contactos</IonTitle>
         <IonItem>
        
           <IonInput
