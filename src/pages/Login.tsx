@@ -20,6 +20,10 @@ const usuarios = [
       usuario: 'Javier',
       clave: 'waos'
     },
+    {
+      usuario: 'Jazmin',
+      clave: '182'
+    },
    
    {
       usuario: 'admin',
