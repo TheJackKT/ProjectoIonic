@@ -1,0 +1,98 @@
+{
+  "hash": "84f47222",
+  "configHash": "458b3d60",
+  "lockfileHash": "a4cb3e8e",
+  "browserHash": "a508401b",
+  "optimized": {
+    "@ionic/react-router": {
+      "src": "../../node_modules/@ionic/react-router/dist/index.js",
+      "file": "@ionic_react-router.js",
+      "fileHash": "6a1b20b6",
+      "needsInterop": false
+    },
+    "@ionic/react": {
+      "src": "../../node_modules/@ionic/react/dist/index.js",
+      "file": "@ionic_react.js",
+      "fileHash": "e39b399c",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "7e709751",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/esm/react-router-dom.js",
+      "file": "react-router-dom.js",
+      "fileHash": "b9ff86ff",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "7b73314d",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "57aa8d6b",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "dist-LgcXgdsJ": {
+      "file": "dist-LgcXgdsJ.js",
+      "isDynamicEntry": false
+    },
+    "p-Baq1XyAy-BkFWhHan": {
+      "file": "p-Baq1XyAy-BkFWhHan.js",
+      "isDynamicEntry": false
+    },
+    "p-C4t5ymfq-BrwKerdR": {
+      "file": "p-C4t5ymfq-BrwKerdR.js",
+      "isDynamicEntry": true
+    },
+    "p-CHqRYvYm-CXtH-2sc": {
+      "file": "p-CHqRYvYm-CXtH-2sc.js",
+      "isDynamicEntry": false
+    },
+    "p-CtukzcyX-8zGXKs23": {
+      "file": "p-CtukzcyX-8zGXKs23.js",
+      "isDynamicEntry": false
+    },
+    "p-D13Eaw-8-DtbfIbzt": {
+      "file": "p-D13Eaw-8-DtbfIbzt.js",
+      "isDynamicEntry": false
+    },
+    "p-D5Ubpm7D-C0ODx_9p": {
+      "file": "p-D5Ubpm7D-C0ODx_9p.js",
+      "isDynamicEntry": true
+    },
+    "p-D7bSXQD3-AjvIYanW": {
+      "file": "p-D7bSXQD3-AjvIYanW.js",
+      "isDynamicEntry": true
+    },
+    "p-Sh0ICmPV-B3Nq9PIs": {
+      "file": "p-Sh0ICmPV-B3Nq9PIs.js",
+      "isDynamicEntry": true
+    },
+    "p-ZjP4CjeZ-D1RiXws9": {
+      "file": "p-ZjP4CjeZ-D1RiXws9.js",
+      "isDynamicEntry": false
+    },
+    "react-CZunmVaX": {
+      "file": "react-CZunmVaX.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-DlAeUGhR": {
+      "file": "react-dom-DlAeUGhR.js",
+      "isDynamicEntry": false
+    },
+    "react-router-dom-4x7yPkIf": {
+      "file": "react-router-dom-4x7yPkIf.js",
+      "isDynamicEntry": false
+    }
+  }
+}
