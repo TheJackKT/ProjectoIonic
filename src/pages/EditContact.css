@@ -20,7 +20,7 @@
 .contenedor-edit {
     max-width: 600px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 60px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,7 +29,7 @@
     background: rgb(71, 146, 188);
 
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 35px;
 
     box-shadow: 0 5px 15px rgba(0,0,0,.2);
 }
@@ -43,7 +43,7 @@
 }
 
 .input-edit {
-    --background: rgb(167, 201, 222);
+    --background: rgb(201, 226, 241);
 
     width: 100%;
 
@@ -52,7 +52,7 @@
     --padding-top: 12px;
     --padding-bottom: 12px;
 
-    --highlight-color: #dbfbff;
+    --highlight-color: #0a4575;
 
     box-shadow: var(--shadow);
 
@@ -85,7 +85,7 @@
 
     --background: rgb(147, 178, 197);
 
-    color: black;
+    color: rgb(2, 2, 2);
     font-weight: bold;
 
     margin-top: 20px;
