@@ -11,6 +11,32 @@ import {
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 
+const usuarios = [
+    {
+      usuario: 'Javier',
+      clave: 'waos'
+    },
+
+    {
+      usuario: 'Jazmin',
+      clave: '182'
+    },
+   
+   {
+      usuario: 'admin',
+      clave: '123'
+    
+    },
+
+    {
+
+      usuario : 'Andrea',
+      clave : '1218'
+
+    }
+  
+  ]
+
 const Login: React.FC = () => {
   const history = useHistory();
 
