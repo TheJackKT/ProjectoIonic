@@ -29,6 +29,10 @@ const usuarios = [
    {
       usuario: 'admin',
       clave: '123'
+    },
+    {
+      usuario: 'juan',
+      clave: 'queso'
     }
   
   ]
