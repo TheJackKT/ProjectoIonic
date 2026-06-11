@@ -5,12 +5,14 @@ import {
   IonHeader,
   IonInput,
   IonItem,
-  IonLabel,
+  IonImg,
   IonPage,
   IonTitle,
   IonToolbar
 } from '@ionic/react';
 
+
+import './EditContact.css'
 import { useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { useContacts } from '../context/ContactContext';
@@ -54,58 +56,94 @@ const EditContact: React.FC = () => {
     <IonPage>
 
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar className="toolbar-edit">
           <IonTitle>Editar Contacto</IonTitle>
         </IonToolbar>
       </IonHeader>
 
-      <IonContent className="ion-padding">
+      <IonContent className="ion-padding fondo-edit">
 
-        <IonItem>
-          <IonLabel position="stacked">Nombre</IonLabel>
-          <IonInput
-            value={name}
-            onIonInput={(e) => setName(e.detail.value!)}
-          />
-        </IonItem>
+  <div className="contenedor-edit">
 
-        <IonItem>
-          <IonLabel position="stacked">Teléfono</IonLabel>
-          <IonInput
-            value={phone}
-            onIonInput={(e) => setPhone(e.detail.value!)}
-          />
-        </IonItem>
+    <IonItem className="item-edit">
+      <IonInput
+        fill="outline"
+        label="Nombre"
+        labelPlacement="stacked"
+        className="input-edit"
+        placeholder="Ingrese el nombre"
+        value={name}
+        onIonInput={(e) => setName(e.detail.value!)}
+      />
+    </IonItem>
 
-        <IonItem>
-          <IonLabel position="stacked">Correo</IonLabel>
-          <IonInput
-            value={email}
-            onIonInput={(e) => setEmail(e.detail.value!)}
-          />
-        </IonItem>
+    <IonItem className="item-edit">
+      <IonInput
+        fill="outline"
+        label="Teléfono"
+        labelPlacement="stacked"
+        className="input-edit"
+        placeholder="Ingrese el teléfono"
+        value={phone}
+        onIonInput={(e) => setPhone(e.detail.value!)}
+      />
+    </IonItem>
 
-        <IonItem>
-          <IonLabel position="stacked">Dirección</IonLabel>
-          <IonInput
-            value={address}
-            onIonInput={(e) => setAddress(e.detail.value!)}
-          />
-        </IonItem>
+    <IonItem className="item-edit">
+      <IonInput
+        fill="outline"
+        label="Correo"
+        labelPlacement="stacked"
+        className="input-edit"
+        placeholder="Ingrese el correo"
+        value={email}
+        onIonInput={(e) => setEmail(e.detail.value!)}
+      />
+    </IonItem>
 
-        <IonItem>
-          <IonLabel position="stacked">URL Foto</IonLabel>
-          <IonInput
-            value={photo}
-            onIonInput={(e) => setPhoto(e.detail.value!)}
-          />
-        </IonItem>
+    <IonItem className="item-edit">
+      <IonInput
+        fill="outline"
+        label="Dirección"
+        labelPlacement="stacked"
+        className="input-edit"
+        placeholder="Ingrese la dirección"
+        value={address}
+        onIonInput={(e) => setAddress(e.detail.value!)}
+      />
+    </IonItem>
 
-        <IonButton expand="block" onClick={saveChanges}>
-          Guardar Cambios
-        </IonButton>
+    <div className="url-edit">
+      <IonItem className="item-edit">
+        <IonInput
+          fill="outline"
+          label="URL Foto"
+          labelPlacement="stacked"
+          className="input-edit"
+          placeholder="Ingrese la URL de la foto"
+          value={photo}
+          onIonInput={(e) => setPhoto(e.detail.value!)}
+        />
+      </IonItem>
+    </div>
 
-      </IonContent>
+    <div className="preview-imagen">
+      {photo && (
+        <IonImg src={photo} />
+      )}
+    </div>
+
+    <IonButton
+      className="boton-guardar"
+      expand="block"
+      onClick={saveChanges}
+    >
+      Guardar Cambios
+    </IonButton>
+
+  </div>
+
+</IonContent>
 
     </IonPage>
   );

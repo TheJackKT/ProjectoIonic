@@ -13,6 +13,7 @@ import {
   IonImg
 } from '@ionic/react';
 
+import './ContactDetail.css';
 import { useHistory, useParams } from 'react-router-dom';
 import { useContacts } from '../context/ContactContext';
 
@@ -39,50 +40,74 @@ const ContactDetail: React.FC = () => {
 
   return (
     <IonPage>
-
       <IonHeader>
-        <IonToolbar>
+    
           <IonTitle>Detalle</IonTitle>
-        </IonToolbar>
+
       </IonHeader>
+      
 
-      <IonContent className="ion-padding">
+      <IonContent className="ion-padding fondo-detail">
 
-        <IonCard>
+    
+    <IonCard className="card-detail">
 
-          <IonImg src={contact.photo} 
-          style={{ maxWidth: '400px', height: '100%' }}/>
+        <div className="contenedor-detail">
 
-          <IonCardHeader>
-            <IonCardTitle>{contact.name}</IonCardTitle>
-          </IonCardHeader>
+            <div>
 
-          <IonCardContent>
+                <IonImg
+                    className="imagen-contacto"
+                    src={contact.photo}
+                />
 
-            <p><strong>Teléfono:</strong> {contact.phone}</p>
-            <p><strong>Correo:</strong> {contact.email}</p>
-            <p><strong>Dirección:</strong> {contact.address}</p>
+            </div>
 
-          </IonCardContent>
+            <div className="info-contacto">
 
-        </IonCard>
+                <div className="nombre-contacto">
+                    {contact.name}
+                </div>
 
-        <IonButton
-          expand="block"
-          onClick={() => history.push(`/edit/${contact.id}`)}
-        >
-          Editar
-        </IonButton>
+                <div className="dato-contacto">
+                    <strong>Teléfono:</strong> {contact.phone}
+                </div>
 
-        <IonButton
-          color="danger"
-          expand="block"
-          onClick={removeContact}
-        >
-          Eliminar
-        </IonButton>
+                <div className="dato-contacto">
+                    <strong>Correo:</strong> {contact.email}
+                </div>
 
-      </IonContent>
+                <div className="dato-contacto">
+                    <strong>Dirección:</strong> {contact.address}
+                </div>
+
+                <div className="botones-detail">
+
+                    <IonButton
+                        className="boton-editar"
+                        onClick={() =>
+                            history.push(`/edit/${contact.id}`)
+                        }
+                    >
+                        Editar
+                    </IonButton>
+
+                    <IonButton
+                        className="boton-eliminar"
+                        onClick={removeContact}
+                    >
+                        Eliminar
+                    </IonButton>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </IonCard>
+
+</IonContent>
 
     </IonPage>
   );

@@ -1,0 +1,84 @@
+.fondo-login {
+
+    --background: none;
+
+    background-image: url('https://i.pinimg.com/736x/fd/a1/d8/fda1d848f9f5377d3e20ae71d760213d.jpg');
+    --backdrop-filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.fondo-login::part(scroll){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.input-usuario{
+    background: transparent;
+    --background: rgb(167, 201, 222);
+    margin-bottom: 10px;  
+    margin-top: 10px;
+    text-shadow: 2px px 1px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    box-shadow: var(--shadow);
+    --padding-start: 15px;
+    --padding-end: 10px;
+    --padding-top: 15px;
+    --padding-bottom: 10px;
+
+
+    --highlight-color: #dbfbff;
+}
+
+.card-login{
+
+     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(122deg ,#688fd88f,#6ba6e29a, #83dff696);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.boton-login{
+    --background: rgb(147, 178, 197);
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    width: 250px;
+    transition: all 0.3s ease;
+  
+}
+
+.boton-login:hover{
+    --background: rgb(167, 201, 222);
+    transform: scale(1.05);
+  
+}
+
+ion-title{
+    color: rgb(186, 253, 255);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(43, 13, 86, 0.5);
+}
+
+ion-item{
+
+    --background: transparent;
+
+}
+

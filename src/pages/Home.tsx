@@ -2,16 +2,17 @@
 import {
   IonButton,
   IonContent,
+  IonCardContent,
   IonHeader,
   IonItem,
   IonLabel,
   IonList,
   IonPage,
   IonTitle,
-  IonToolbar,
   IonAvatar
 } from '@ionic/react';
 
+import './Home.css';
 import { useHistory } from 'react-router-dom';
 import { useContacts } from '../context/ContactContext';
 
@@ -21,42 +22,63 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Mis Contactos</IonTitle>
-        </IonToolbar>
-      </IonHeader>
 
-      <IonContent className="ion-padding">
+  <IonHeader>
+    
+      <IonTitle>Mis Contactos</IonTitle>
 
-        <IonButton
-          expand="block"
-          onClick={() => history.push('/add')}
-        >
-          Agregar Contacto
-        </IonButton>
+  </IonHeader>
 
-        <IonList>
-          {contacts.map((contact) => (
-            <IonItem
-              key={contact.id}
-              button
-              onClick={() => history.push(`/detail/${contact.id}`)}
+  <IonContent className="ion-padding fondo-home">
+
+    <IonCardContent className="card-home">
+
+      <IonButton
+        className="button-add"
+        expand="block"
+        onClick={() => history.push('/add')}
+      >
+        Agregar Contacto
+      </IonButton>
+
+      <IonList className="lista-contactos">
+
+        {contacts.map((contact) => (
+
+          <IonItem
+            className="contact-item"
+            key={contact.id}
+            button
+            onClick={() => history.push(`/detail/${contact.id}`)}
+          >
+
+            <IonAvatar
+              slot="start"
+              className="contacto-avatar"
             >
-              <IonAvatar slot="start">
-                <img src={contact.photo} alt={contact.name} />
-              </IonAvatar>
+              <img
+                src={contact.photo}
+                alt={contact.name}
+              />
+            </IonAvatar>
 
-              <IonLabel>
-                <h2>{contact.name}</h2>
-                <p>{contact.phone}</p>
-              </IonLabel>
-            </IonItem>
-          ))}
-        </IonList>
+            <IonLabel className="contacto-label">
+              <h2>{contact.name}</h2>
+              <p>{contact.phone}</p>
+            </IonLabel>
 
-      </IonContent>
-    </IonPage>
+          </IonItem>
+
+        ))}
+
+      </IonList>
+
+
+    </IonCardContent>
+
+  </IonContent>
+
+</IonPage>
   );
 };
 
